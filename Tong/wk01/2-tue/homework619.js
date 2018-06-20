@@ -51,16 +51,19 @@ for(i=1; i<=10; i++){
 //to fix
 //Your top choices
 var favoriteAnimal =['cat','dog','rat','rabbit','fish','chicken'];
-var suffix = ['st','nd','rd','th']
 for(i=1; i<=favoriteAnimal.length;i++){
-    if (i%10===1){
-        console.log('My '+i+'st choice is '+favoriteAnimal[i-1]);
-    } else if (i%10===2){
-        console.log('My '+i+'nd choice is '+favoriteAnimal[i-1]);
-    } else if (i%10===3) {
-    console.log('My '+i+'rd choice is '+favoriteAnimal[i-1]);
-    } else{
+    if (i%100===11 ||i%100===12||i%100===13){
         console.log('My '+i+'th choice is '+favoriteAnimal[i-1]);
+    } else{
+        if (i%10===1){
+            console.log('My '+i+'st choice is '+favoriteAnimal[i-1]);
+        } else if (i%10===2){
+            console.log('My '+i+'nd choice is '+favoriteAnimal[i-1]);
+        } else if (i%10===3) {
+        console.log('My '+i+'rd choice is '+favoriteAnimal[i-1]);
+        } else{
+            console.log('My '+i+'th choice is '+favoriteAnimal[i-1]);
+        }
     }
 }
 
