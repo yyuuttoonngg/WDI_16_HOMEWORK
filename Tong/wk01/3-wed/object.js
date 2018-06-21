@@ -8,9 +8,14 @@ var favoriteRecipe ={
 };
 console.log ('-' + favoriteRecipe.title);
 console.log('-' + 'Serves: ' + favoriteRecipe.servings);
+
+//three different ways to disply the favoriteRecipe.ingredients array
 for (var i=0; i<favoriteRecipe.ingredients.length; i++){
     console.log('-' + favoriteRecipe.ingredients[i]);
 }
+favoriteRecipe.ingredients.forEach(function(a){console.log('.' + a)});
+
+console.log(favoriteRecipe.ingredients.join('\n'));
 
 
 //The Reading List
@@ -29,7 +34,7 @@ var bookArray = [
 ];
 for (var i=0; i<bookArray.length; i++) {
     var bookInfo ='"' + bookArray[i].title +'"' + ' by '+ bookArray[i].author;
-    if (bookArray[i].read === true){
+    if (bookArray[i].read ){
         console.log('You already read ' + bookInfo);
     } else {
         console.log('You still need to read ' + bookInfo);
@@ -43,10 +48,10 @@ var favoriteMovie = {
     stars: ['Mr big head','the crazy guy','the pink pig']
 };
 
-function printMovieInfo(){
-    console.log(favoriteMovie.title + ' lasts for ' +favoriteMovie.duration + ' minutes. Stars: ' +favoriteMovie.stars);
+function printMovieInfo(movie){  //adding parameter of function-- movie
+    var info =movie.title + ' lasts for ' +movie.duration + ' minutes. Stars: ' +movie.stars.join(', ');
+    return (info + '.');
 
 }
-printMovieInfo();
-
+console.log(printMovieInfo(favoriteMovie));
 
