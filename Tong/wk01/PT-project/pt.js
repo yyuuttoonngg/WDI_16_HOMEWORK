@@ -17,6 +17,7 @@ var trainLines =[
 ];
 
 var lineNumber =trainLines.length;
+var stationNumber=0;
 
 
 //user input of starting station and ending station 
@@ -59,6 +60,7 @@ function compareTwoStations(a,b){
         }     
         console.log(route(a,b,lineSame));
     }
+        console.log('Total staions: '+ stationNumber);
 }
 
 //define the route from station a to b, print each station in between.
@@ -67,12 +69,16 @@ function route(a,b,line){
     findLine = trainLines.find(x => x.lineName ===line);
     indexa = findLine.stations.indexOf(a);
     indexb = findLine.stations.indexOf(b);
+    var num;
     // always print from a to b, if in the array, a's index is greater than b, we need to reverse the array before printing it
      if (indexa<indexb){
+       stationNumber += indexb - indexa;
+       console.log(stationNumber);
        return findLine.lineName + ' LINE -- ' + findLine.stations.slice(indexa,indexb+1).join(' - ');
     }else{
+       stationNumber += indexa - indexb;
        return findLine.lineName + ' LINE -- ' + findLine.stations.slice(indexb,indexa+1).reverse().join(' - ')
-    }   
+    } 
 }
 
 //when starting and ending stations are on two different lines, print a to Richmond and Richmond to b, combine with 'change to'
