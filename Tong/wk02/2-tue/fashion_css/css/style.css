@@ -1,0 +1,112 @@
+body{
+    font-family:'Work Sans', sans-serif;
+    width: 80%;
+    margin: 0 auto;
+}
+header{
+    display:flex;
+    margin: 1em 0;
+}
+.navtop{
+    display:flex;
+}
+.container-middle{
+    display: flex;
+}
+.ad{
+    background-color: lightgray;
+    color:gray;
+    padding: 0.1em 0;
+    font-size: 2.5em;
+    margin: 0.5em 0;
+    text-align: center;
+
+}
+article{
+    border-bottom: 0.05em solid lightgray;
+    margin-top:1em;
+}
+.about{
+    border-top: 0.05em solid lightgray;
+}
+.posts{
+    border-top: 0.05em solid lightgray;
+}
+main{
+    width: 70%;
+    height: 30%;
+}
+aside{
+    width:25%;
+    margin-left: 3%
+}
+img{
+    width: 100%;
+}
+a {
+    color:red;
+    font-weight: 900;
+    font-size: 0.8em;
+    text-decoration: none;
+    vertical-align: middle;
+    margin: 1em 0;
+}
+.container-middle a{
+    display: block;
+    text-align: right;
+}
+.navtop a{
+    font-size: 0.8em;
+    width: 16%;
+    color:white;
+    background-color: black;
+    margin:0 1% 0 0;    
+    text-align: center;
+    height: 1.7em;
+    padding-top: 1.2%; 
+}
+.navbottom a{
+    border-left: 0.1em solid red;
+    padding:0 0.4%;
+    font-size: 0.8em;
+}
+.navbottom a:first-child{
+    border-left:none;
+    padding-left: none;
+}
+h1{   
+    font-size: 2.5em;
+    color:red;
+    margin:0;
+
+}
+.subtitle{
+    color:grey;
+    font-size: 1.5em;
+    margin: 0 0 0 1.5em ;
+    position: relative;
+    bottom: -0.7em;
+}
+.subhead::first-letter {
+    color: lightgray;
+    float: left;
+    line-height: 1;
+    font-size: 4em;
+    margin: 0 .2em 0 0;
+    font-weight: bold;
+}
+footer{
+    margin-top:1.5em;
+}
+.postlinks a{
+    text-align: left;  
+    margin:0;
+}
+.date{
+    font-size: 1.5em;
+    color:lightgray;
+}
+main h2{
+    margin: 0.2em 0;
+
+}
