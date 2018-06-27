@@ -11,8 +11,8 @@ var trainLines =[
        stations:['Flinders Street','Richmond','East Richmond','Burnley', 'Hawthorn', 'Glenferrie']
     },
     {
-    lineName:'Sandringham',
-    stations:['Southern Cross', 'Richmond', 'South Yarra', 'Prahran', 'Windsor']
+        lineName:'Sandringham',
+        stations:['Southern Cross', 'Richmond', 'South Yarra', 'Prahran', 'Windsor']
     }
 ];
 
@@ -36,7 +36,7 @@ function findStationsLine(input) {
     if (linesStationOn.length> 0){
         return linesStationOn;
     } else{
-        input = prompt("Can't find station '" +input +"', Please enter a valid station name");
+        input = prompt("Can't find station '" + input + "', Please enter a valid station name");
     }
 }
 
@@ -81,11 +81,37 @@ function route(a,b,line){
     } 
 }
 
-//when starting and ending stations are on two different lines, print a to Richmond and Richmond to b, combine with 'change to'
+ //to find the intersection , this function only works if there is only 1 intersection between two give lines.
+ function findIntersection(a,b){
+    var stationArray1;
+    var stationArray2;
+    var intersection;
+    for(i=0; i<trainLines.length; i++){
+        if(trainLines[i].stations.includes(a)){
+            stationArray1 = trainLines[i].stations;
+        }
+        if(trainLines[i].stations.includes(b)){
+            stationArray2 = trainLines[i].stations;
+        }
+    }
+    for(m=0; m<stationArray1.length; m++){
+        for (n=0; n<stationArray2.length; n++ ){
+            if(stationArray1[m]===stationArray2[n]){
+                intersection = stationArray1[m];
+            }
+        }
+    }
+    return intersection;
+}
+
+
+//when starting and ending stations are on two different lines, print a to intersection, changeline, intersection to b, combine with 'change to'
 function onTwoLines(a,b,linea,lineb){
-    route1 =route(a,'Richmond',linea.toString());
-    route2= route('Richmond',b,lineb.toString());
+    var intersection = findIntersection(a,b);
+    route1 =route(a,intersection,linea.toString());
+    route2= route(intersection,b,lineb.toString());
     return route1 +' - * CHANGE TO * - ' + route2;
 }
+
 
 compareTwoStations();
