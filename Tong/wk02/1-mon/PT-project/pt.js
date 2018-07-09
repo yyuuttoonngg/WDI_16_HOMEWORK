@@ -19,11 +19,10 @@ var trainLines =[
 var lineNumber =trainLines.length;
 var stationNumber=0;
 
-
 //user input of starting station and ending station 
 input1 = prompt('Please enter the origin station');
 input2 = prompt('where is your destination?');
-//
+
 
 //return which line the selected station is on
 function findStationsLine(input) {
