@@ -56,4 +56,6 @@ users["Anil"][:favorite_numbers].select{|n|n%2==0}
 #return an array of the favorite numbers common to all users
 users["Erik"][:favorite_numbers] & users["Anil"][:favorite_numbers] & users["Jonathan"][:favorite_numbers]
 #return an array containing all users' favorite numbers, sorted, and excluding duplicates
-p (users["Erik"][:favorite_numbers] | users["Anil"][:favorite_numbers] | users["Jonathan"][:favorite_numbers]).sort
+(users["Erik"][:favorite_numbers] | users["Anil"][:favorite_numbers] | users["Jonathan"][:favorite_numbers]).sort
+# or
+users.values.map {|hash| hash[:favorite_numbers]}.flatten.sort.uniq

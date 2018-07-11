@@ -41,7 +41,17 @@ def longest arr
         memo.length > word.length ? memo : word
     end
 end
-#p longest(["Nothing" , "takes", "the", "taste", "out", "of", "peanut", "butter", "quite", "like", "unrequited", "love"])
 
+def longest2 arr
+    arr.max_by do |str|
+        str.length
+    end
+end
 
+def longest3 arr
+    arr.max do |str1, str2|
+        str1.length <=> str2.length
+    end
+end
 
+p longest3 (["Nothing" , "takes", "the", "taste", "out", "of", "peanut", "butter", "quite", "like", "unrequited", "loveddddddddd"])
