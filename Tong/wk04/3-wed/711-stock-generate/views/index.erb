@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="<%= url('/styles.css') %>">
+</head>
+<body>
+
+<h1>My stock app</h1>
+<form action="/" method="get">
+  <input type="text" name="stock_symbol" value="">
+  <button>Find Stock</button>
+</form>
+<h1><%= params[:stock_symbol] %></h1>
+<% if @stock %>
+  <%= @stock.latest_price %>
+<% else %>
+  <div>Stock does not exist</div>
+<% end %>
+
+</body>
+</html>
