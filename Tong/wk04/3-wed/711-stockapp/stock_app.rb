@@ -5,8 +5,7 @@ require 'sinatra/reloader'
 require 'stock_quote'
 
 get '/' do
-    stock = StockQuote::Stock.quote(params['stock'])
-    @name = stock.company_name
-    @price = stock.latest_price 
+    @ticker = @params['stock']
+    @stock = StockQuote::Stock.quote(@ticker)
     erb(:index)
 end

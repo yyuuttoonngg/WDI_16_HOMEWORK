@@ -9,7 +9,10 @@
 </head>
 <body>
     <p>RIP Yahoo Finance welcome Google overlords Stock App</p>
-    <p>The latest stock price for <%= @name %> : $<%= @price %> </p>
-
+    <% if @stock %>
+        <p>The latest stock price for <%= @stock.company_name %> : $<%= @stock.latest_price %> </p>
+    <% else %>
+        <p>not found</p>
+    <% end %>
 </body>
 </html>
