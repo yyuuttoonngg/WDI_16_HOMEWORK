@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body style ="background-color:mistyrose; font-family:Arial;">
+    <% if @num_bottle>0 %>
+    <p> <%= @num_bottle %> bottles of beer on the wall. <a href ="/beer/<%= @num_bottle - 1 %>"> Take one down</a></p>
+    <% elsif @num_bottle==0 %>
+    <p>No Bottles of beer on the wall</p>
+    <% end %>
+</body>
+</html>
