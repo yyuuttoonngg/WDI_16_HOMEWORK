@@ -8,9 +8,9 @@
 </head>
 <body style ="background-color:mistyrose; font-family:Arial;">
     <% if @num_bottle>0 %>
-    <p> <%= @num_bottle %> bottles of beer on the wall. <a href ="/beer/<%= @num_bottle - 1 %>"> Take one down</a></p>
+        <p> <%= @num_bottle %> bottles of beer on the wall. <a href ="/beer/<%= @num_bottle - 1 %>"> Take one down</a></p>
     <% elsif @num_bottle==0 %>
-    <p>No Bottles of beer on the wall</p>
+        <p>No Bottles of beer on the wall</p>
     <% end %>
 </body>
 </html>
