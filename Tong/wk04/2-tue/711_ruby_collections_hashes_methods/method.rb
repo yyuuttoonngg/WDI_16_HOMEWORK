@@ -1,10 +1,15 @@
 # 1
+# def lengths arr_of_strs
+#     number =[]
+#     arr_of_strs.each{|str|  number.push str.length}
+#     return number
+# end
+
 def lengths arr_of_strs
-    number =[]
-    arr_of_strs.each{|str|  number.push str.length}
-    return number
+    arr_of_strs.map{|str|str.length}
 end
-#p lengths ["hello", "what", "is", "up", "dude"]
+
+p lengths ["hello", "what", "is", "up", "dude"]
 
 # 2
 def transmogrifier a, b, c
