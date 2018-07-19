@@ -1,0 +1,6 @@
+<h1>welcome to my planet page</h1>
+<p>my collection of planets</p>
+<% @planets.each do |planet|%>
+    <p><a href="/planets/<%=planet.id%>"><%=planet.name %></a></p>
+<%end%>
+<p><a href="/planets/add">add more....</a></p>

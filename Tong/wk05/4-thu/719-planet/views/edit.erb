@@ -1,0 +1,16 @@
+<h1>edit planet</h1>
+
+<form action="/planets/<%=@planet.id%>" method="post">
+    <input type="hidden" name = "_method" value ='put'>
+    <label for="">name</label>
+    <input type="text" name ="name" value = "<%=@planet.name%>">
+    <label for="">image url</label>
+    <input type="text" name="image_url" value="<%=@planet.image_url%>">
+    <label for="">facts</label>
+    <input type="text" name ="facts" value = "<%=@planet.facts%>">
+    <label for="">wikipedia link</label>
+    <input type="text" name ="link" value = "<%=@planet.link%>">
+    <button>post</button>
+</form>
+
+<p><a href="/planets/<%=@planet.id%>/delete">delete</a></p>

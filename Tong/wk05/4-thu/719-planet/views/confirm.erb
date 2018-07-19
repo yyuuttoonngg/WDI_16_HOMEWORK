@@ -1,0 +1,5 @@
+<h1>are you sure you want to delete everything about <%= @planet.name%>?</h1>
+<form action="/planets/<%=@planet.id%>" method ='post'>
+    <input type="hidden" name="_method" value ="delete">
+    <button>delete</button>
+</form>
