@@ -20,8 +20,6 @@ get '/search' do
   @input = params[:s]
   @input = URI.encode(@input)
   # @input =@input.gsub(/&/, "%26").sub(/%26action/, "&action")
-
-
   # @input.gsub! /[^a-z0-9-]+/, ' '
   File.open('history.txt',"a") do |line|
     line.puts "#{Time.now} search key word: " + params[:s]

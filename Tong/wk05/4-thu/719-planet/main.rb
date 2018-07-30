@@ -5,7 +5,7 @@ require_relative 'db_config'
 require_relative 'models/planet'
 
 get '/' do 
-    @planets = Planet.all
+    @planets = Planet.all.order('id')
     erb :index
 end 
 
