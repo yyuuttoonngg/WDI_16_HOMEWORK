@@ -103,7 +103,7 @@ video {
   .masthead {
     height: 100%;
     min-height: 0;
-    width: 40.5rem;
+    width: 30.5rem;
     padding-bottom: 0;
   }
   .masthead .masthead-bg {
@@ -122,6 +122,16 @@ video {
     font-size: 1.3rem;
   }
 }
+
+@media (min-width: 992px) {
+  .masthead {
+    width:40.5em;
+    }
+
+}
+
+
+
 
 .social-icons {
   position: absolute;
@@ -151,7 +161,7 @@ video {
     margin: 0;
     position: absolute;
     right: 1rem;
-    bottom: 4rem;
+    top: 4rem;
     width: auto;
   }
   .social-icons ul {
@@ -182,8 +192,8 @@ video {
   .social-icons {
     margin: 0;
     position: absolute;
-    right: 8rem;
-    top: 8rem;
+    right: 4rem;
+    top: 4rem;
     width: auto;
   }
   .social-icons ul {
