@@ -33,9 +33,15 @@ $(window).scroll(function() {
         searchGiphy()
         } else {
             $('.end-btn').removeClass('hidden');
+            $('.to-top-btn').removeClass('hidden');
         }
     }
 })
 
 $('.input-btn').on('click',getSearchWord);
 $('.end-btn').on('click',searchGiphy);
+$('.to-top-btn').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+})
+
