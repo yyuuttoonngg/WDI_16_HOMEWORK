@@ -13,3 +13,9 @@ $('form').on('keydown', '.input-box', function (e) {
         console.log(userColor);
     }
 });
+
+
+for(var i=0; i<1000; i ++){
+    console.log('div')
+    $('.canvas').append('<div class="square"></div>');
+}
