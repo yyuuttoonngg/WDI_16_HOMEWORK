@@ -1,3 +1,7 @@
+for(var i=0; i<1000; i ++){
+    $('<div/>',{ class : 'square'}).appendTo('.canvas');
+}
+
 $('.color-btn').on('click',function(e){
     e.preventDefault();
     var userColor = $('.input-box').val();
@@ -13,9 +17,10 @@ $('form').on('keydown', '.input-box', function (e) {
         console.log(userColor);
     }
 });
+$('.square').each(function(){
+    $(this).on("click",function(){
+        $(this).toggleClass('green');
+    })
+})
 
 
-for(var i=0; i<1000; i ++){
-    console.log('div')
-    $('.canvas').append('<div class="square"></div>');
-}
