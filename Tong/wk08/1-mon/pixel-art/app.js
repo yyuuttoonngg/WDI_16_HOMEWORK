@@ -17,10 +17,9 @@ var userColor;
     })
 })();
 
-
 for(var i=0; i<1000; i ++){
     $('<div/>',{ class : 'square'}).appendTo('.canvas');
-    $('.square').on('click',changeColor);
+    $('.square').on('mouseover',changeColor);
 }
 
 function changeColor(){
