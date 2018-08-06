@@ -1,4 +1,6 @@
 // srbOZIQ6Ewvyy6zxWsxCtkeuiOM880A0
+// storing API key -- store it on the server not the front end 
+// environment key
 
 var offset = 0
 var searchWord;
@@ -9,10 +11,15 @@ function getSearchWord(){
 }
 
 function searchGiphy(){
-    console.log('search')
     $.ajax({
         method: 'GET',
-        url: 'https://api.giphy.com/v1/gifs/search?q=' + searchWord + '&api_key=srbOZIQ6Ewvyy6zxWsxCtkeuiOM880A0&limit=10&offset='+offset,
+        url: 'http://api.giphy.com/v1/gifs/search',
+        data: {
+            q: searchWord,
+            offset: offset,
+            limit:10,
+            api_key: 'srbOZIQ6Ewvyy6zxWsxCtkeuiOM880A0'
+        },
         dataType: 'json',
     }).done(onSuccess);
 }
@@ -24,13 +31,13 @@ function onSuccess(responseData) {
         img.src=url;
         $('.giphies').append(img);
     })
-    offset+=10;
+    offset += 10;
 }
 
 $(window).scroll(function() {
     if($(window).scrollTop() == $(document).height() - $(window).height()){
         if (offset<30){
-        searchGiphy()
+            searchGiphy()
         } else {
             $('.end-btn').removeClass('hidden');
             $('.to-top-btn').removeClass('hidden');
