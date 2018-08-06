@@ -1,12 +1,23 @@
+*{
+    box-sizing: border-box;
+}
 .canvas{
+    margin:0;
     display: flex;
     flex-wrap: wrap;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+    width: 600px;
 }
 .square{
     width: 20px;
     height:20px;
-    border:1px solid black;
+    border:1px solid rgba(0, 0, 0, 0.167);
 }
 .green{
     background-color: green;
+}
+img{
+    width:100%;
 }
