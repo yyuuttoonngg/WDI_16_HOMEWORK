@@ -1,0 +1,19 @@
+<div class ="container">
+    <h1 class ="display-4 text-center my-5 text-muted">what's your favorite cat?</h1>
+    <div class="row">
+        <%@cats.each do |cat|%>
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+            <div class="card mb-3 text-white bg-dark">
+                <img src="<%=cat.url%>" alt="<%=cat.name%>" class="card-img-top">
+                <div class="card-body">
+                    <h4 class="card-title"><%=cat.name%></h4>
+                    <p clss="card-text"><%=cat.info%></p>
+                </div>
+                <div class="card-footer text-right bg-secondary">
+                    <a href="/<%=cat.id%>" class="text-light" >more</a>
+                </div>
+            </div> 
+        </div>
+        <%end%>
+    </div>
+</div>

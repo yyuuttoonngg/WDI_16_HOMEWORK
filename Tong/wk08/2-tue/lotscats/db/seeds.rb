@@ -1,0 +1,13 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+
+Cat.create(name:'ABYSSINIAN',url:'https://www.vetwest.com.au/sites/default/files/styles/large/public/images/article/abyssinian_0.jpg',info:'In looks, the "Aby" (as it is affectionately known in the cat world) is similar to drawings of Ancient Egyptian cats and there are some who believe it originated in the Nile Valley, however there continues to be speculation and controversy concerning its history. There is no doubt, however, that it is one of the oldest short-haired breeds. The name is not because the breed originated in Ethiopia, formerly Abyssinia, but because the first Abyssinian exhibited at a cat show in England was imported from that country.')
+Cat.create(name:'SIBERIAN FOREST CAT',url:'https://www.vetwest.com.au/sites/default/files/styles/large/public/images/article/siberian_forest_cat_0.jpg?itok=kcvGuxHK',info:'Originally from Russia, the Siberian Forest Cat withstood harsh climates, becoming hardy and strong. The history of this breed has been traced as far back as the year 1000.')
+Cat.create(name:'AUSTRALIAN MIST',url:'https://www.vetwest.com.au/sites/default/files/styles/large/public/images/article/australian-mist_0.jpg',info:'The delightful Australian Mist, formerly known as the Spotted Mist, proudly wears the label "Made In Australia". This home-grown Aussie cat breed has evolved from a predominantly Burmese background, with Abyssinian and domestic shorthair in the mix. From this combination has come the most confident and companionable of cats.')
+Cat.create(name:'BURMESE',url:'https://www.vetwest.com.au/sites/default/files/styles/large/public/images/article/burmese-cat.jpg',info:'The Burmese is a personality plus cat with a sunny disposition and unflappable nature ideally suited to Australian lifestyles. A happy go-lucky tomboy of a cat, the Burmese retains their kittenish curiosity and playfulness throughout their life - thereby making them an ideal children\'s playmate.')
+Cat.create(name:'SPHYNX',url:'https://www.vetwest.com.au/sites/default/files/styles/large/public/images/article/sphynx_0.jpg',info:'The Sphynx is a unique breed, known for their hairless characteristic. Europe cat breeders have been creating the Sphynx breed since the early 1960s. Today\'s Sphynx was bred from hairless cats that created from a mutation in Canada in 1966.')
