@@ -1,0 +1,16 @@
+<h1>Posts</h1>
+<section class="posts">
+    <% @posts.each do |post| %>
+        <article class="">
+            <p><%= post.content %></p>
+            <span><%= post.user.name %></span>
+        </article>
+
+        <article>
+            <% post.comments.each do |c| %>
+                <p>comments for this post: <%= c.content %> by <%= c.user.name %></p>
+            
+            <% end %>
+        </article>
+    <% end %>
+</section>
