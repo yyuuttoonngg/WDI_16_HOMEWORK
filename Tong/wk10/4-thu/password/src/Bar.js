@@ -7,7 +7,6 @@ export default function Bar(props){
         backgroundColor:props.color || 'red'
     }
     return <div className="bar-wrapper">
- 
         <div style={barStyle} className="bar"></div> 
     </div>
 }
