@@ -1,0 +1,11 @@
+.bar-wrapper{
+    width:100px;
+    
+    margin: 0 auto;
+}
+.bar{
+  
+    background-color:yellow;
+    height:10px;
+    transition: all 300ms ease;
+}
